@@ -1,1 +1,40 @@
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
+    </link>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-primary mb-3">
+        <div class="container">
+          <a href="#" class="navbar-brand">Guess the number</a>
+        </div>
+      </nav>
+    <div class="container mainContainer">
+        <div id="result"></div>
+        <div class="subContainer">
+            <label class="col-sm-2 col-form-label"><strong>Input</strong></label>
+            <div class="col-sm-3">
+                <input type="text" class="form-control" id="text_field" placeholder="Guess within 1 to 50">
+            </div>
+        </div>
+
+        <div>
+            <label class="col-sm-2 col-form-label"></label>
+            <div class="row-mb-4">
+                <button onclick="guessNumber()" id="guess_btn" class="btn btn-outline-primary">Guess</button>
+                <button onclick="playAgain()" class="btn btn-outline-secondary">Play again</button>
+            </div>
+        </div>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
+</body>
+
+</html>
