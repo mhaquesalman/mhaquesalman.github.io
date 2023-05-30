@@ -5,18 +5,17 @@ let low = 1;
 let high = 50;
 let gameover = false;
 
-// let correct_ans = Math.floor(Math.random() * (high - low + 1) + low);
-let correct_ans = 20;
+let correct_ans = Math.floor(Math.random() * (high - low + 1) + low);
 let step = 0;
 console.log("number: " + correct_ans);
 
 function guessNumber() {
-    step++;
     let guessAns = parseInt(input.value);
 
     if (isNaN(guessAns)) {
         alert('Field is empty');
     } else {
+        step++;
         while (step <= 3 && !gameover) {
             if (guessAns == correct_ans) {
                 // showMessage("success", 0);
@@ -49,7 +48,6 @@ function guessNumber() {
 
 }
 
-
 function showMessage(className, i) {
     div.className = i == 3 && !gameover ? `alert alert-danger` : `alert alert-${className}`;
     if (i <= 3 && !gameover) {
@@ -73,8 +71,8 @@ function showMessage(className, i) {
 
 }
 
-
 function playAgain() {
+    correct_ans = Math.floor(Math.random() * (high - low + 1) + low);
     step = 0
     gameover = false
     div.remove()
